@@ -1,0 +1,20 @@
+.wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .main {
+    padding-top: var(--header-height);
+    min-height: calc(100% - var(--footer-height));
+  }
+}
+
+/*
+@media (max-width: 900px) {
+  .wrapper {
+    .main {
+      padding-top: 52px;
+    }
+  }
+}
+*/
