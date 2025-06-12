@@ -9,6 +9,7 @@ import { Notification } from '../../ui-kit/Notification';
 import WarningIcon from '../../assets/icons/warning.svg';
 import FlagIcon from '../../assets/icons/flag.svg';
 import ThumbsUpIcon from '../../assets/icons/thumbsUp.svg';
+import UploadPage from "../UploadPage";
 
 interface FullSurveyData {
   childName: string;
@@ -156,6 +157,7 @@ function UiKit() {
 
         <Button type="submit">Отправить данные</Button>
       </form>
+      <UploadPage/>
     </div>
   );
 }

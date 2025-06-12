@@ -20,8 +20,7 @@ function App() {
     // </Routes>
 
     <div>
-      {/*<UiKit />*/}
-        <UploadPage />
+      <UiKit />y
     </div>
   );
 }
