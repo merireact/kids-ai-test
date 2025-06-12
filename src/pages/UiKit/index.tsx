@@ -4,7 +4,11 @@ import { Input } from '../../ui-kit/Input';
 import { RadioGroup } from '../../ui-kit/RadioGroup';
 import { DatePicker } from '../../ui-kit/DatePicker';
 import { Textarea } from '../../ui-kit/TextField';
-import {Button} from "../../ui-kit/Button";
+import { Button } from '../../ui-kit/Button';
+import { Notification } from '../../ui-kit/Notification';
+import WarningIcon from '../../assets/icons/warning.svg';
+import FlagIcon from '../../assets/icons/flag.svg';
+import ThumbsUpIcon from '../../assets/icons/thumbsUp.svg';
 
 interface FullSurveyData {
   childName: string;
@@ -15,6 +19,9 @@ interface FullSurveyData {
   specialNeeds: string;
   strengths: string;
 }
+
+
+
 
 function UiKit() {
   const [formData, setFormData] = useState<FullSurveyData>({
@@ -51,12 +58,11 @@ function UiKit() {
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Предотвращаем перезагрузку страницы
-    console.log('Form data:', formData); // Выводим все данные в консоль
+    e.preventDefault();
+    console.log('Form data:', formData);
   };
 
   return (
-    // 5. Оборачиваем все в один контейнер с отступами
     <div style={{ padding: '30px', maxWidth: '700px', margin: '0 auto' }}>
       <form
         onSubmit={handleSubmit}
@@ -66,9 +72,7 @@ function UiKit() {
           Кнопка иконка слева
         </Button>
 
-        <Button icon={ArrowGrayIcon} >
-          Кнопка иконка справа
-        </Button>
+        <Button icon={ArrowGrayIcon}>Кнопка иконка справа</Button>
 
         <Input
           id="childName"
@@ -128,6 +132,27 @@ function UiKit() {
           value={formData.strengths}
           onChange={(e) => handleChange('strengths', e.target.value)}
         />
+
+        <Notification variant="warning" icon={WarningIcon}>
+          Допустимые форматы файлов: jpg, jpeg, png, pdf. Размер не более 5 Мб
+        </Notification>
+
+        <Notification variant="info">
+          <Notification.Item icon={ThumbsUpIcon}>
+            <p>
+              Пожалуйста, внимательно прочитайте каждый вопрос и выберите
+              наиболее подходящий вариант ответа, отражающий поведение и
+              эмоциональное состояние вашего ребенка в течение последних 2-4
+              недель. Отвечайте максимально честно и искренне, так как от этого
+              зависит точность оценки психоэмоционального развития Вашего
+              ребенка.
+            </p>
+          </Notification.Item>
+
+          <Notification.Item icon={FlagIcon}>
+            <p>Все вопросы обязательны к заполнению</p>
+          </Notification.Item>
+        </Notification>
 
         <Button type="submit">Отправить данные</Button>
       </form>
