@@ -1,11 +1,8 @@
 import React from 'react';
+import UiKit from "./pages/UiKit";
 
 function App() {
-  return (
-    <div >
-     myau
-    </div>
-  );
+  return <div><UiKit></UiKit></div>;
 }
 
 export default App;

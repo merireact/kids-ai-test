@@ -40,12 +40,18 @@
   --main-disabled-btn: #44537180;
 
   --main-blue100: #45A5F6;
+  --main-blue010: #007EE5;
   --main-blue060: #C7E4FC;
   --main-blue050: #DAEDFD;
+
 
   --main-red110: #E12828;
   --main-red050: #FADEE0;
   --main-violet110: #6447CF;
+  --main-violet100: #8A6BF4;
+
+  --white: #ffffff;
+
 
   /*--header-height: 68px;*/
   /*--footer-height: 120px;*/
