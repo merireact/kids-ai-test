@@ -1,0 +1,108 @@
+.datePickerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 16px;
+  color: var(--main-default);
+  margin-bottom: 8px;
+}
+
+.datePickerWrapper {
+  width: 90px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--main-surface5);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--main-default);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    border-color: var(--main-violet100);
+    color: var(--main-default);
+    outline: none;
+  }
+}
+
+.calendar {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  padding: 16px;
+
+  :global(.react-datepicker__triangle) {
+    display: none;
+  }
+
+  :global(.react-datepicker__header) {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 12px 0 0 0 ;
+  }
+
+  :global(.react-datepicker__navigation) {
+    top: 19px;
+  }
+
+  :global(.react-datepicker__current-month) {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-default);
+    margin-bottom: 16px;
+  }
+
+  :global(.react-datepicker__day-name) {
+    color: var(--main-muted);
+    font-family: Font-Regular, sans-serif;
+    width: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
+}
+
+:global(.react-datepicker__day) {
+  width: 36px;
+  line-height: 36px;
+  margin: 0;
+  border-radius: 6px;
+  color: var(--main-default);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--main-surface3);
+  }
+}
+
+:global(.react-datepicker__day--selected) {
+  background-color: var(--main-violet100);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--main-violet120);
+  }
+}
+
+:global(.react-datepicker__day--today) {
+}
+
+:global(.react-datepicker__day--outside-month) {
+  color: var(--main-muted);
+}
+
+:global(.react-datepicker__day--disabled) {
+  color: var(--main-muted);
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,132 @@
+/*700*/
+@font-face {
+  font-family: "Font-Bold";
+  src: url("../public/assets/fonts/CirceRounded/CirceRounded-Bold.otf") format('opentype');
+}
+
+/*500*/
+@font-face {
+  font-family: "Font-Medium";
+  src: url("../public/assets/fonts/CirceRounded/CirceRounded-ExtraBold.otf") format('opentype');
+}
+
+/*400*/
+@font-face {
+  font-family: "Font-Regular";
+  src: url("../public/assets/fonts/CirceRounded/CirceRounded-Regular.otf") format('opentype');
+}
+
+/*300*/
+@font-face {
+  font-family: "Font-Light";
+  src: url("../public/assets/fonts/CirceRounded/CirceRounded-Light.otf") format('opentype');
+}
+/*200*/
+@font-face {
+  font-family: "Font-Thin";
+  src: url("../public/assets/fonts/CirceRounded/CirceRounded-Thin.otf") format('opentype');
+}
+
+
+
+
+
+:root {
+  --main-default: #293244;
+  --main-muted: #A0A9B8;
+  --main-surface5: #D0D4DC;
+  --main-surface3: #F6F6F8;
+  --main-disabled: #44537180;
+  --main-disabled-btn: #44537180;
+
+  --main-blue100: #45A5F6;
+  --main-blue010: #007EE5;
+  --main-blue060: #C7E4FC;
+  --main-blue050: #DAEDFD;
+
+
+  --main-red110: #E12828;
+  --main-red050: #FADEE0;
+  --main-violet110: #6447CF;
+  --main-violet100: #8A6BF4;
+
+  --white: #ffffff;
+
+
+  /*--header-height: 68px;*/
+  /*--footer-height: 120px;*/
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-height: 52px;
+    --footer-height: 337px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Font-Regular, sans-serif;
+  color: var(--main-default);
+  font-size: 13px;
+  /*-ms-overflow-style: none;  !* IE and Edge *!*/
+  /*scrollbar-width: none;  !* Firefox *!*/
+}
+
+/**::-webkit-scrollbar {
+  display: none;
+}*/
+
+body {
+  /*overflow-y: hidden;*/
+  /*overflow-x: auto;*/
+}
+
+input, textarea {
+  /*font-size: 13px;*/
+  /*color: #061F40;*/
+  /*border: none;*/
+  outline: none;
+  resize: none;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background-color: unset;
+}
+
+::placeholder {
+  color: #7F8A99;
+}
+
+.row {
+  display: flex;
+}
+
+/* Disable blue overlay */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+}
